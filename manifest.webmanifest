@@ -1,6 +1,6 @@
 {
-  "name": "烏丸線 時刻表",
-  "short_name": "烏丸線",
+  "name": "電車",
+  "short_name": "電車",
   "description": "京都市営地下鉄 烏丸線 国際会館⇄竹田（行き・帰り／平日・土休日）",
   "lang": "ja",
   "start_url": ".",
