@@ -54,6 +54,7 @@
   .tagwrap{flex:1;display:flex;justify-content:center;align-items:center}
   .row.next .tag{font-size:20px;font-weight:700;color:var(--nextink);background:rgba(0,0,0,.25);border:.5px solid var(--nextline);border-radius:99px;padding:4px 14px;white-space:nowrap}
   .foot{flex-shrink:0;margin-top:13px;padding:0 4px;font-size:11px;color:var(--hint);line-height:1.7}
+  #status{text-align:center;font-size:14px;font-weight:700;margin-bottom:4px;letter-spacing:.04em}
   .legend{display:flex;justify-content:center;gap:14px;margin-top:6px;font-size:13px;color:var(--sub)}
   .legend span{display:flex;align-items:center;gap:6px}
   .legend i{width:13px;height:13px;border-radius:3px;display:inline-block;flex-shrink:0}
@@ -140,8 +141,9 @@ function show(k){
 function defaultView(){return new Date().getHours()<12?'go':'back';}
 function refresh(){
   if(!DATA)return;
-  var now=new Date(),st=document.getElementById('status');
-  st.textContent=isHolidayType(now)?'土曜・休日ダイヤ':'平日ダイヤ';
+  var now=new Date(),st=document.getElementById('status'),holi=isHolidayType(now);
+  st.textContent=holi?'土曜・休日ダイヤ':'平日ダイヤ';
+  st.style.color=holi?'var(--kin)':'var(--grn)';
   show(defaultView());
 }
 (function(){
