@@ -1,4 +1,4 @@
-const CACHE = 'karasuma-v3';
+const CACHE = 'karasuma-v4';
 const ASSETS = [
   './',
   './index.html',
